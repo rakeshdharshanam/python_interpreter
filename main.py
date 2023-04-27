@@ -18,7 +18,7 @@ def home():
         py_code = request.get_json()
         print(py_code['code'])
 
-        with open("./online_code.py", "w") as f:
+        with open("./online_pycode.py", "w") as f:
             f.write((py_code['code']))
         output = open("./output.txt","w+")
         try:
@@ -39,11 +39,11 @@ def js():
         py_code = request.get_json()
         print(py_code['code'])
 
-        with open("./online_code.py", "w") as f:
+        with open("./online_jscode.js", "w") as f:
             f.write((py_code['code']))
         output = open("./output.txt", "w+")
         try:
-            subprocess.call("python online_code.py", stdout=output, stderr=output)
+            subprocess.call("node online_jscode.js", stdout=output, stderr=output)
         except Exception as e:
             print(e)
         output.close()
