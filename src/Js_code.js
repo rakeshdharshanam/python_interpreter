@@ -20,7 +20,7 @@ function Js_code(){
         // axios.get("http://127.0.0.1:5000/home").then(resp=>console.log(resp))
         // var data = JSON.stringify(payload)
         // data = JSON.parse(data)
-        axios.post("http://127.0.0.1:5000/home",payload).then(resp=>setoutput(resp.data))
+        axios.post("http://127.0.0.1:5000/js",payload).then(resp=>setoutput(resp.data))
         // var code_output = 
         // console.log(resp.data)
         // setoutput(resp.data)

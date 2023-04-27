@@ -66,3 +66,26 @@ button{
   left: 60%;
   z-index: 2;
 }
+
+nav{
+  display: block;
+  background-color: black;
+} 
+
+a{
+  color: white;
+  margin: 0;
+  text-decoration: none;
+  background-color: rgba(8, 126, 57, 0.808);
+  border-style: dotted;
+}
+
+a:hover{
+  background-color: white;
+  color: black;
+}
+
+a:visited{
+  background-color: white;
+  color: black;
+}
