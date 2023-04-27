@@ -6,11 +6,6 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
-# file = open("./output.txt","w")
-# sys.stdout = file
-
-
-
 @app.route('/home',methods=["GET","POST"])
 def home():
     if request.method == "GET":
