@@ -20,12 +20,18 @@ def home():
 
         with open("./online_pycode.py", "w") as f:
             f.write((py_code['code']))
-        output = open("./output.txt","w+")
+        output = open("./output.txt","w")
         try:
-            subprocess.call("python online_code.py",stdout=output,stderr=output)
+            subprocess.call("python online_pycode.py",stdout=output,stderr=output)
         except Exception as e:
             print(e)
         output.close()
+
+        output = open("./output.txt", "r")
+        output_data = output.read()
+        # print(output_data)
+        output.close()
+        return output_data
 
 @app.route('/js', methods=["GET", "POST"])
 def js():
@@ -41,7 +47,7 @@ def js():
 
         with open("./online_jscode.js", "w") as f:
             f.write((py_code['code']))
-        output = open("./output.txt", "w+")
+        output = open("./output.txt", "w")
         try:
             subprocess.call("node online_jscode.js", stdout=output, stderr=output)
         except Exception as e:
