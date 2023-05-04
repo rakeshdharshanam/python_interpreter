@@ -22,7 +22,7 @@ def home():
             f.write((py_code['code']))
         output = open("./output.txt","w")
         try:
-            subprocess.call("python online_pycode.py",stdout=output,stderr=output)
+            subprocess.call(["python","online_pycode.py"],stdout=output,stderr=output)
         except Exception as e:
             print(e)
         output.close()
